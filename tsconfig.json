@@ -24,6 +24,12 @@
       ],
       "loading-indicator/*": [
         "dist/loading-indicator/*"
+      ],
+      "button": [
+        "dist/button"
+      ],
+      "button/*": [
+        "dist/button/*"
       ]
     }
   },
