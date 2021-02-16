@@ -1,0 +1,29 @@
+{
+  "name": "@fotihose/loading-indicator",
+  "version": "1.0.0",
+  "description": "A simple loading indicator",
+  "keywords": [
+    "angular",
+    "fotihose",
+    "loading indicator",
+    "ngx"
+  ],
+  "homepage": "https://github.com/halloverden/fotihose/tree/main/projects/loading-indicator#readme",
+  "bugs": {
+    "url": "https://github.com/halloverden/fotihose/issues"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Andreas Larssen",
+    "email": "andreas@halloverden.no"
+  },
+  "contributors": [],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/halloverden/fotihose/tree/main/projects/loading-indicator"
+  },
+  "peerDependencies": {
+    "@angular/common": "^8.2.0",
+    "@angular/core": "^8.2.0"
+  }
+}

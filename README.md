@@ -1,6 +1,16 @@
 # Fotihose
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.2.
+The general idea behind Fotihose is to create a network of standalone Angular components that lets you install that one component instead of a whole library.
+
+## Dogma
+- Do not encapsulate native HTML elements
+- Use sane styling defaults
+  - Make them configurable!
+- Have as few dependencies as possible
+  - No dependencies on external packages
+- Make it as easy as possible for the developer to include and use the packages
+  - Minimum needed config
+  - Again, with a mix of sane defaults and configurable styles and functionality
 
 ## Development server
 

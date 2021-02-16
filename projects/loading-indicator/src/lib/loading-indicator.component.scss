@@ -1,0 +1,34 @@
+:host {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+
+  .spinner-wrapper {
+    border-radius: 50%;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+    stroke-width: 7;
+
+    .circle-container {
+      animation: circle-container-rotate 900ms linear infinite both;
+      transform-origin: 50% 50%;
+
+      .circle-path {
+        fill: none;
+        stroke-dasharray: 90;
+        stroke-dashoffset: 0;
+      }
+    }
+
+    .icon-container {
+      stroke-width: 4;
+    }
+  }
+
+  @keyframes circle-container-rotate {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}
