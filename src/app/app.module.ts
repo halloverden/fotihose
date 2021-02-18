@@ -1,7 +1,7 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { AppComponent } from './app.component';
-import {LoadingIndicatorModule} from 'loading-indicator';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {AppComponent} from './app.component';
+import {FihLoadingIndicatorModule} from 'fih-loading-indicator';
 
 @NgModule({
   declarations: [
@@ -9,9 +9,9 @@ import {LoadingIndicatorModule} from 'loading-indicator';
   ],
   imports: [
     BrowserModule,
-    LoadingIndicatorModule
+    FihLoadingIndicatorModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

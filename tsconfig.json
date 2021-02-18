@@ -19,11 +19,11 @@
       "dom"
     ],
     "paths": {
-      "loading-indicator": [
-        "dist/loading-indicator"
+      "fih-loading-indicator": [
+        "dist/fih-loading-indicator"
       ],
-      "loading-indicator/*": [
-        "dist/loading-indicator/*"
+      "fih-loading-indicator/*": [
+        "dist/fih-loading-indicator/*"
       ],
       "button": [
         "dist/button"

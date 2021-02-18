@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { FihLoadingIndicatorComponent } from './loading-indicator.component';
+import {FihLoadingIndicatorComponent} from './fih-loading-indicator.component';
 
 @NgModule({
   declarations: [FihLoadingIndicatorComponent],
@@ -7,4 +7,4 @@ import { FihLoadingIndicatorComponent } from './loading-indicator.component';
   ],
   exports: [FihLoadingIndicatorComponent]
 })
-export class LoadingIndicatorModule { }
+export class FihLoadingIndicatorModule { }

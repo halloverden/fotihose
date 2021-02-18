@@ -1,4 +1,8 @@
-# Fotihose: Loading indicator
+<p align="center">
+ <img width="65px" height="65px" src="./src/assets/logo/logo_black_500x500.png" alt="logo" >
+</p>
+
+# Loading indicator
 
 This component is part of the [Fotihose](https://github.com/halloverden/fotihose) network, which is a network of standalone components.
 

@@ -8,7 +8,7 @@
     "loading indicator",
     "ngx"
   ],
-  "homepage": "https://github.com/halloverden/fotihose/tree/main/projects/loading-indicator#readme",
+  "homepage": "https://github.com/halloverden/fotihose/tree/main/projects/fih-loading-indicator#readme",
   "bugs": {
     "url": "https://github.com/halloverden/fotihose/issues"
   },
@@ -20,7 +20,7 @@
   "contributors": [],
   "repository": {
     "type": "git",
-    "url": "https://github.com/halloverden/fotihose/tree/main/projects/loading-indicator"
+    "url": "https://github.com/halloverden/fotihose/tree/main/projects/fih-loading-indicator"
   },
   "peerDependencies": {
     "@angular/common": "^8.2.0",

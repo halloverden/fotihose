@@ -1,6 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { FihLoadingIndicatorComponent } from './loading-indicator.component';
+import {FihLoadingIndicatorComponent} from './fih-loading-indicator.component';
 
 describe('LoadingIndicatorComponent', () => {
   let component: FihLoadingIndicatorComponent;
