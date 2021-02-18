@@ -1,1 +1,9 @@
 <fih-loading-indicator size="15"></fih-loading-indicator>
+
+<fih-button [processing]="test">
+  <button #button (click)="test = !test">Button 1</button>
+</fih-button>
+
+<fih-button [processing]="test">
+  <button #button (click)="test = !test">Button 2</button>
+</fih-button>
