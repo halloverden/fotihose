@@ -1,3 +1,7 @@
+<p align="center">
+ <img width="65px" height="65px" src="https://github.com/halloverden/fotihose/blob/main/src/assets/logo/logo_black_500x500.png" alt="logo" >
+</p>
+
 # Button
 
 This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.0.

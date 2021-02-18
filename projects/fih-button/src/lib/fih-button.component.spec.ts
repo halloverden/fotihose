@@ -1,8 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FihButtonComponent } from './button.component';
+import { FihButtonComponent } from './fih-button.component';
 
-describe('ButtonComponent', () => {
+describe('FihButtonComponent', () => {
   let component: FihButtonComponent;
   let fixture: ComponentFixture<FihButtonComponent>;
 

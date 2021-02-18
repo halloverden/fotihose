@@ -1,5 +1,5 @@
 {
-  "name": "@fotihose/button",
+  "name": "@fotihose/fih-button",
   "version": "1.0.0",
   "description": "A simple button",
   "keywords": [
@@ -8,7 +8,7 @@
     "fotihose",
     "ngx"
   ],
-  "homepage": "https://github.com/halloverden/fotihose/tree/main/projects/button#readme",
+  "homepage": "https://github.com/halloverden/fotihose/tree/main/projects/fih-button#readme",
   "bugs": {
     "url": "https://github.com/halloverden/fotihose/issues"
   },
@@ -20,7 +20,7 @@
   "contributors": [],
   "repository": {
     "type": "git",
-    "url": "https://github.com/halloverden/fotihose/tree/main/projects/button"
+    "url": "https://github.com/halloverden/fotihose/tree/main/projects/fih-button"
   },
   "dependencies": {
     "@fotihose/loading-indicator": "^1.0.0"

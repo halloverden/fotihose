@@ -25,11 +25,11 @@
       "fih-loading-indicator/*": [
         "dist/fih-loading-indicator/*"
       ],
-      "button": [
-        "dist/button"
+      "fih-button": [
+        "dist/fih-button"
       ],
-      "button/*": [
-        "dist/button/*"
+      "fih-button/*": [
+        "dist/fih-button/*"
       ]
     }
   },

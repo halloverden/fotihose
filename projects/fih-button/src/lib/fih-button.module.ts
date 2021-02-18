@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { FihButtonComponent } from './button.component';
+import {FihButtonComponent} from './fih-button.component';
 
 @NgModule({
   declarations: [FihButtonComponent],
@@ -7,4 +7,4 @@ import { FihButtonComponent } from './button.component';
   ],
   exports: [FihButtonComponent]
 })
-export class ButtonModule { }
+export class FihButtonModule { }
