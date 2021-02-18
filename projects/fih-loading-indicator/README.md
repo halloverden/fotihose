@@ -1,5 +1,5 @@
 <p align="center">
- <img width="65px" height="65px" src="../../src/assets/logo/logo_black_500x500.png" alt="logo" >
+ <img width="65px" height="65px" src="https://github.com/halloverden/fotihose/blob/main/src/assets/logo/logo_black_500x500.png" alt="logo" >
 </p>
 
 # Loading indicator
