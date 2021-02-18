@@ -1,5 +1,5 @@
 <p align="center">
- <img width="50%" height="50%" src="./src/assets/logo/logo_black_500x500.png" alt="logo" >
+ <img width="65px" height="65px" src="./src/assets/logo/logo_black_500x500.png" alt="logo" >
 </p>
 
 # Fotihose
