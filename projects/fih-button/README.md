@@ -34,10 +34,10 @@ With a tag
 
 ### Inputs
 
-| Input       | Type     | Default  | Description |
-|-------------|:--------:|:--------:|:-----------:|
-| buttonId    | string   | fih-btn  | Used inside component to enable loading indicator 
-| processing  | boolean  | false    | When true, it shows a loading indicator
+| Input                   | Type     | Default  | Description |
+|-------------------------|:--------:|:--------:|:-----------:| 
+| loadingIndicatorColor   | string   | #000     | Color of the loading indicator (hex)
+| processing              | boolean  | false    | When true, it shows a loading indicator
 
 ### Outputs
 

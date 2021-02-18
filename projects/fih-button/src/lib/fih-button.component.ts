@@ -33,13 +33,12 @@ export class FihButtonComponent implements OnChanges, AfterViewInit {
   button: ElementRef;
 
   @Input()
-  buttonId = 'fih-btn';
-
-  buttonText: string;
+  loadingIndicatorColor = '#000';
 
   @Input()
   processing?: boolean;
 
+  private _buttonText: string;
   private _host: HTMLElement;
 
   /**
@@ -56,13 +55,16 @@ export class FihButtonComponent implements OnChanges, AfterViewInit {
   ngAfterViewInit(): void {
     // Set static width to keep width when content changes (when processing)
     this._renderer.setStyle(this.button.nativeElement, 'width', this.button.nativeElement.offsetWidth + 'px');
+    // this._renderer.setStyle(this.button.nativeElement, 'height', this.button.nativeElement.offsetHeight + 'px');
+
+    console.log(this.button.nativeElement.offsetHeight);
+    console.log(this.button.nativeElement.getBoundingClientRect());
 
     // Uppercase button text
-    this.buttonText = this.button.nativeElement.innerText.toUpperCase();
+    this._buttonText = this.button.nativeElement.innerText.toUpperCase();
 
     // Wrap button content in span (host element) w/ known id
     this._host = this._renderer.createElement('span');
-    this._host.id = this.buttonId;
 
     this._renderer.setProperty(this.button.nativeElement, 'innerHTML', '');
     this._renderer.insertBefore(this.button.nativeElement, this._host, this.button.nativeElement.firstChild);
@@ -70,7 +72,7 @@ export class FihButtonComponent implements OnChanges, AfterViewInit {
     if (this.processing) {
       this._loadComponent(FihLoadingIndicatorComponent);
     } else {
-      this._renderer.setProperty(this._host, 'innerHTML', this.buttonText);
+      this._renderer.setProperty(this._host, 'innerHTML', this._buttonText);
     }
   }
 
@@ -84,7 +86,7 @@ export class FihButtonComponent implements OnChanges, AfterViewInit {
       if (changes.processing.currentValue) {
         this._loadComponent(FihLoadingIndicatorComponent);
       } else {
-        this._renderer.setProperty(this._host, 'innerHTML', this.buttonText); // TODO: Is it cleaned up? Better way?
+        this._renderer.setProperty(this._host, 'innerHTML', this._buttonText); // TODO: Is it cleaned up? Better way?
       }
     }
   }
@@ -98,7 +100,7 @@ export class FihButtonComponent implements OnChanges, AfterViewInit {
     this._applicationRef.attachView(ref.hostView);
 
     ref.instance.size = 15; // TODO: Make dynamic (follow content size)
-    ref.instance.color = '#fff';
+    ref.instance.color = this.loadingIndicatorColor;
 
     return ref;
   }
