@@ -54,7 +54,7 @@ export class FihButtonComponent implements OnChanges, AfterViewInit {
    */
   ngAfterViewInit(): void {
     // Set static width to keep width when content changes (when processing)
-    this._renderer.setStyle(this.button.nativeElement, 'width', this.button.nativeElement.offsetWidth + 'px');
+    // this._renderer.setStyle(this.button.nativeElement, 'width', this.button.nativeElement.offsetWidth + 'px');
     // this._renderer.setStyle(this.button.nativeElement, 'height', this.button.nativeElement.offsetHeight + 'px');
 
     console.log(this.button.nativeElement.offsetHeight);
