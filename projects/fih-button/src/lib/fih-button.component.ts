@@ -13,7 +13,7 @@ import {
   Renderer2,
   SimpleChanges, Type, ViewContainerRef
 } from '@angular/core';
-import {FihLoadingIndicatorComponent} from 'fih-loading-indicator';
+import {FihLoadingIndicatorComponent} from '@fotihose/loading-indicator';
 
 /**
  * Inject native HTML button or an a tag, and add the #button tag to it so this component can identify it.
@@ -72,9 +72,6 @@ export class FihButtonComponent implements OnChanges, AfterViewInit {
     } else {
       this._renderer.setProperty(this._host, 'innerHTML', this.buttonText);
     }
-
-    // ADD STYLES
-    this._renderer.addClass(this.button.nativeElement, 'btn');
   }
 
   /**
