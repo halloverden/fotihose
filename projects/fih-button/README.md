@@ -4,25 +4,49 @@
 
 # Button
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.0.
+This component is part of the [Fotihose](https://github.com/halloverden/fotihose) network, which is a network of standalone components.
 
-## Code scaffolding
+## Considerations
+This component relies on [Renderer2](https://angular.io/api/core/Renderer2) for styling.
 
-Run `ng generate component component-name --project button` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project button`.
-> Note: Don't forget to add `--project button` or else it will be added to the default project in your `angular.json` file. 
+## Installation
+```
+npm i @fotihose/button -S
+```
 
-## Build
+## Usage
 
-Run `ng build button` to build the project. The build artifacts will be stored in the `dist/` directory.
+With button
 
-## Publishing
+```html
+  <fih-button>
+    <button #button></button>
+  </fih-button>
+```
 
-After building your library with `ng build button`, go to the dist folder `cd dist/button` and run `npm publish`.
+With a tag
 
-## Running unit tests
+```html
+  <fih-button>
+    <a #button></a>
+  </fih-button>
+```
 
-Run `ng test button` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Inputs
 
-## Further help
+| Input       | Type     | Default  | Description |
+|-------------|:--------:|:--------:|:-----------:|
+| buttonId    | string   | fih-btn  | Used inside component to enable loading indicator 
+| processing  | boolean  | false    | When true, it shows a loading indicator
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+### Outputs
+
+No outputs
+
+## License
+MIT
+
+## Change log
+
+### 1.0.0
+- First release
