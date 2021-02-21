@@ -4,22 +4,22 @@ import {
   ChangeDetectionStrategy,
   Component,
   ComponentFactory,
-  ComponentFactoryResolver, ComponentRef,
+  ComponentFactoryResolver,
   ContentChild,
   ElementRef,
   Injector,
   Input,
   OnChanges,
   Renderer2,
-  SimpleChanges, Type, ViewContainerRef
+  SimpleChanges,
+  Type
 } from '@angular/core';
 import {FihLoadingIndicatorComponent} from '@fotihose/loading-indicator';
 
 /**
- * Inject native HTML button or an a tag, and add the #button tag to it so this component can identify it.
+ * Inject native HTML button
  *
  * @example <fih-button><button #button></button></fih-button>
- * @example <fih-button><a #button></a></fih-button>
  *
  */
 @Component({
@@ -38,8 +38,7 @@ export class FihButtonComponent implements OnChanges, AfterViewInit {
   @Input()
   processing?: boolean;
 
-  private _buttonText: string;
-  private _host: HTMLElement;
+  private _originalButtonContent: any;
 
   /**
    *
@@ -53,26 +52,11 @@ export class FihButtonComponent implements OnChanges, AfterViewInit {
    *
    */
   ngAfterViewInit(): void {
-    // Set static width to keep width when content changes (when processing)
-    // this._renderer.setStyle(this.button.nativeElement, 'width', this.button.nativeElement.offsetWidth + 'px');
-    // this._renderer.setStyle(this.button.nativeElement, 'height', this.button.nativeElement.offsetHeight + 'px');
-
-    console.log(this.button.nativeElement.offsetHeight);
-    console.log(this.button.nativeElement.getBoundingClientRect());
-
-    // Uppercase button text
-    this._buttonText = this.button.nativeElement.innerText.toUpperCase();
-
-    // Wrap button content in span (host element) w/ known id
-    this._host = this._renderer.createElement('span');
-
-    this._renderer.setProperty(this.button.nativeElement, 'innerHTML', '');
-    this._renderer.insertBefore(this.button.nativeElement, this._host, this.button.nativeElement.firstChild);
+    // Save original content
+    this._originalButtonContent = this.button.nativeElement.innerText;
 
     if (this.processing) {
       this._loadComponent(FihLoadingIndicatorComponent);
-    } else {
-      this._renderer.setProperty(this._host, 'innerHTML', this._buttonText);
     }
   }
 
@@ -81,12 +65,12 @@ export class FihButtonComponent implements OnChanges, AfterViewInit {
    */
   ngOnChanges(changes: SimpleChanges): void {
     if (changes.processing && !changes.processing.isFirstChange()) {
-      this._renderer.setProperty(this.button.nativeElement, 'disabled', changes.processing.currentValue); // TODO: Check
+      this._renderer.setProperty(this.button.nativeElement, 'disabled', changes.processing.currentValue);
 
       if (changes.processing.currentValue) {
         this._loadComponent(FihLoadingIndicatorComponent);
       } else {
-        this._renderer.setProperty(this._host, 'innerHTML', this._buttonText); // TODO: Is it cleaned up? Better way?
+        this._renderer.setProperty(this.button.nativeElement, 'innerHTML', this._originalButtonContent); // TODO: Is it cleaned up? Better way?
       }
     }
   }
@@ -94,14 +78,11 @@ export class FihButtonComponent implements OnChanges, AfterViewInit {
   /**
    *
    */
-  private _loadComponent(comp: Type<FihLoadingIndicatorComponent>, parentNode: HTMLElement | ViewContainerRef = this._host): ComponentRef<FihLoadingIndicatorComponent> {
+  private _loadComponent(comp: Type<FihLoadingIndicatorComponent>): void {
     const factory: ComponentFactory<FihLoadingIndicatorComponent> = this._resolver.resolveComponentFactory(comp);
-    const ref = factory.create(this._injector, [], parentNode);
-    this._applicationRef.attachView(ref.hostView);
-
+    const ref = factory.create(this._injector, [], this.button.nativeElement);
     ref.instance.size = 15; // TODO: Make dynamic (follow content size)
     ref.instance.color = this.loadingIndicatorColor;
-
-    return ref;
+    this._applicationRef.attachView(ref.hostView);
   }
 }
