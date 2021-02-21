@@ -6,6 +6,9 @@
 
 This component is part of the [Fotihose](https://github.com/halloverden/fotihose) network, which is a network of standalone components.
 
+## Description
+A simple loading indicator using svg.
+
 ## Considerations
 This component relies on [Renderer2](https://angular.io/api/core/Renderer2) for styling.
 
