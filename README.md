@@ -1,7 +1,3 @@
-<p align="center">
- <img width="65px" height="65px" src="https://github.com/halloverden/fotihose/blob/main/src/assets/logo/logo_black_500x500.png" alt="logo" >
-</p>
-
 # Fotihose
 
 The general idea behind Fotihose is to create a network of standalone Angular components that lets you install that one component instead of a whole library.
