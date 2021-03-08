@@ -34,8 +34,11 @@ MIT
 
 ## Change log
 
+### 1.0.2
+- Bugfix: Handle changes in input
+
 ### 1.0.1
-- Documentation
+- Docs: Small changes
 
 ### 1.0.0
 - First release
