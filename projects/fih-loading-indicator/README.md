@@ -23,7 +23,7 @@ npm i @fotihose/loading-indicator -S
 | Input | Type    | Default | Description |
 |-------|:-------:|:-------:|:-----------:|
 | color | string  | #000    | Color of the loading indicator (hex)
-| size  | number  | -       | Size of the loading indicator (in px)
+| size  | number  | -       | Size of the loading indicator (px)
 
 ### Outputs
 
