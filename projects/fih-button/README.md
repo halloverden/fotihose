@@ -41,9 +41,6 @@ No outputs
 ## License
 MIT
 
-## Todo
-- Option to keep button aspect ratio when showing loading indicator
-
 ## Change log
 
 ### 1.0.0
