@@ -34,6 +34,9 @@ export class FihButtonComponent implements OnChanges, AfterViewInit {
   loadingIndicatorColor = '#000';
 
   @Input()
+  loadingIndicatorSize = 15;
+
+  @Input()
   processing?: boolean;
 
   private _originalButtonContent: any;
@@ -74,15 +77,18 @@ export class FihButtonComponent implements OnChanges, AfterViewInit {
    */
   private _handleLoadingIndicator(): void {
     if (this.processing) {
+      this._renderer.setStyle(this.button.nativeElement, 'height', this.button.nativeElement.scrollHeight + 'px');
+      this._renderer.setStyle(this.button.nativeElement, 'width', this.button.nativeElement.scrollWidth + 'px');
+
       const factory: ComponentFactory<FihLoadingIndicatorComponent> = this._resolver.resolveComponentFactory(FihLoadingIndicatorComponent);
       const ref = this._viewContainerRef.createComponent(factory);
       ref.instance.color = this.loadingIndicatorColor;
-
-      ref.instance.size = 15; // TODO: Make dynamic (follow content size)
-
+      ref.instance.size = this.loadingIndicatorSize;
       this._renderer.setProperty(this.button.nativeElement, 'innerHTML', '');
       this._renderer.appendChild(this.button.nativeElement, ref.location.nativeElement);
     } else {
+      this._renderer.setStyle(this.button.nativeElement, 'height', '');
+      this._renderer.setStyle(this.button.nativeElement, 'width', '');
       this._renderer.setProperty(this.button.nativeElement, 'innerHTML', this._originalButtonContent);
     }
 

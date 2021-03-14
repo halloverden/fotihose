@@ -28,11 +28,15 @@ Add #button to the button, so the component knows what element is the button. Wo
 | Input                   | Type     | Default  | Description |
 |-------------------------|:--------:|:--------:|:-----------:| 
 | loadingIndicatorColor   | string   | #000     | Color of the loading indicator (hex)
+| loadingIndicatorSize    | string   | 15       | Size of the loading indicator (in px)
 | processing              | boolean  | false    | When true, it shows a loading indicator
 
 ### Outputs
 
 No outputs
+
+## TODO
+- Keep button aspect ratio when in loading state
 
 ## License
 MIT
