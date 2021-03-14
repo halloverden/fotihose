@@ -37,7 +37,7 @@ export class FihButtonComponent implements OnChanges, AfterViewInit {
   loadingIndicatorSize = 15;
 
   @Input()
-  processing?: boolean;
+  processing = false;
 
   private _originalButtonContent: any;
 
