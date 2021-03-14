@@ -70,6 +70,11 @@ export class FihButtonComponent implements OnChanges, AfterViewInit {
     if (changes.loadingIndicatorColor && !changes.loadingIndicatorColor.isFirstChange()) {
       this._handleLoadingIndicator();
     }
+
+    // Loading indicator size
+    if (changes.loadingIndicatorSize && !changes.loadingIndicatorSize.isFirstChange()) {
+      this._handleLoadingIndicator();
+    }
   }
 
   /**
