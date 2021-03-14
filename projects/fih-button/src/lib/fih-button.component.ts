@@ -1,18 +1,16 @@
 import {
   AfterViewInit,
-  ApplicationRef,
   ChangeDetectionStrategy,
   Component,
   ComponentFactory,
   ComponentFactoryResolver,
   ContentChild,
   ElementRef,
-  Injector,
   Input,
   OnChanges,
   Renderer2,
   SimpleChanges,
-  Type
+  ViewContainerRef
 } from '@angular/core';
 import {FihLoadingIndicatorComponent} from '@fotihose/loading-indicator';
 
@@ -43,46 +41,51 @@ export class FihButtonComponent implements OnChanges, AfterViewInit {
   /**
    *
    */
-  constructor(private _applicationRef: ApplicationRef,
-              private _injector: Injector,
-              private _renderer: Renderer2,
-              private _resolver: ComponentFactoryResolver) {}
+  constructor(private _renderer: Renderer2,
+              private _resolver: ComponentFactoryResolver,
+              private _viewContainerRef: ViewContainerRef) {}
 
   /**
    *
    */
   ngAfterViewInit(): void {
     // Save original content
-    this._originalButtonContent = this.button.nativeElement.innerText;
-
-    if (this.processing) {
-      this._loadComponent(FihLoadingIndicatorComponent);
-    }
+    this._originalButtonContent = this.button.nativeElement.innerHTML;
+    this._handleLoadingIndicator();
   }
 
   /**
    *
    */
   ngOnChanges(changes: SimpleChanges): void {
+    // Processing
     if (changes.processing && !changes.processing.isFirstChange()) {
-      this._renderer.setProperty(this.button.nativeElement, 'disabled', changes.processing.currentValue);
+      this._handleLoadingIndicator();
+    }
 
-      if (changes.processing.currentValue) {
-        this._loadComponent(FihLoadingIndicatorComponent);
-      } else {
-        this._renderer.setProperty(this.button.nativeElement, 'innerHTML', this._originalButtonContent); // TODO: Is it cleaned up? Better way?
-      }
+    // Loading indicator color
+    if (changes.loadingIndicatorColor && !changes.loadingIndicatorColor.isFirstChange()) {
+      this._handleLoadingIndicator();
     }
   }
 
   /**
    *
    */
-  private _loadComponent(comp: Type<FihLoadingIndicatorComponent>): void {
-    const factory: ComponentFactory<FihLoadingIndicatorComponent> = this._resolver.resolveComponentFactory(comp);
-    const ref = factory.create(this._injector, [], this.button.nativeElement);
-    ref.instance.size = 15; // TODO: Make dynamic (follow content size)
-    ref.instance.color = this.loadingIndicatorColor;
-    this._applicationRef.attachView(ref.hostView);
+  private _handleLoadingIndicator(): void {
+    if (this.processing) {
+      const factory: ComponentFactory<FihLoadingIndicatorComponent> = this._resolver.resolveComponentFactory(FihLoadingIndicatorComponent);
+      const ref = this._viewContainerRef.createComponent(factory);
+      ref.instance.color = this.loadingIndicatorColor;
+
+      ref.instance.size = 15; // TODO: Make dynamic (follow content size)
+
+      this._renderer.setProperty(this.button.nativeElement, 'innerHTML', '');
+      this._renderer.appendChild(this.button.nativeElement, ref.location.nativeElement);
+    } else {
+      this._renderer.setProperty(this.button.nativeElement, 'innerHTML', this._originalButtonContent);
+    }
+
+    this._renderer.setProperty(this.button.nativeElement, 'disabled', this.processing);
   }
 }
