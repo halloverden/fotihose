@@ -33,7 +33,7 @@ Add #button to the button, so the component knows what element is the button. Wo
 No outputs
 
 ## TODO
-- Keep button aspect ratio when in loading state
+- Keep button aspect ratio when processing
 
 ## License
 MIT
