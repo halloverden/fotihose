@@ -43,7 +43,6 @@ MIT
 
 ## Todo
 - Option to keep button aspect ratio when showing loading indicator
-- Loading indicator size as optional input
 
 ## Change log
 
