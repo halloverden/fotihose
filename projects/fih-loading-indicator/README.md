@@ -26,6 +26,9 @@ npm i @fotihose/loading-indicator -S
 
 No outputs
 
+## TODO
+- Support different loading indicators
+
 ## License
 MIT
 
