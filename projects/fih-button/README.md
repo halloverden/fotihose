@@ -15,7 +15,7 @@ npm i @fotihose/button -S
 
 ## Usage
 
-With button
+Add #button to the button, so the component knows what element is the button. Woah, poetry! 
 
 ```html
   <fih-button>
@@ -36,6 +36,10 @@ No outputs
 
 ## License
 MIT
+
+## Todo
+- Option to keep button aspect ratio when showing loading indicator
+- Loading indicator size as optional input
 
 ## Change log
 
