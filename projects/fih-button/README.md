@@ -5,9 +5,6 @@ This component is part of the [Fotihose](https://github.com/halloverden/fotihose
 ## Description
 A simple wrapper for a native button element that shows a loading indicator in the button when prompted. 
 
-## Considerations
-This component relies on [Renderer2](https://angular.io/api/core/Renderer2) for styling.
-
 ## Installation
 ```
 npm i @fotihose/button -S
