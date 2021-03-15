@@ -31,9 +31,6 @@ export class FihButtonComponent implements OnChanges, AfterViewInit {
   button: ElementRef;
 
   @Input()
-  disableOnProcessing = true;
-
-  @Input()
   loadingIndicatorColor = '#000';
 
   @Input()
@@ -64,11 +61,6 @@ export class FihButtonComponent implements OnChanges, AfterViewInit {
    *
    */
   ngOnChanges(changes: SimpleChanges): void {
-    // Disable on processing
-    if (changes.disableOnProcessing && !changes.disableOnProcessing.isFirstChange()) {
-      this._handleLoadingIndicator();
-    }
-
     // Processing
     if (changes.processing && !changes.processing.isFirstChange()) {
       this._handleLoadingIndicator();
@@ -98,10 +90,6 @@ export class FihButtonComponent implements OnChanges, AfterViewInit {
       this._renderer.appendChild(this.button.nativeElement, ref.location.nativeElement);
     } else {
       this._renderer.setProperty(this.button.nativeElement, 'innerHTML', this._originalButtonContent);
-    }
-
-    if (this.disableOnProcessing) {
-      this._renderer.setProperty(this.button.nativeElement, 'disabled', this.processing);
     }
   }
 }
