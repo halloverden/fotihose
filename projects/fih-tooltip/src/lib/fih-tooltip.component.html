@@ -1,0 +1,28 @@
+<button
+  (click)="click()"
+  (focusin)="open()"
+  (focusout)="close()"
+  (keyup.escape)="close()"
+  (mouseenter)="mouseEnter()"
+  (mouseleave)="mouseLeave()"
+  [attr.aria-describedby]="id"
+  [attr.aria-expanded]="show"
+  aria-label="Tooltip"
+  class="trigger"
+  id="button_{{id}}"
+>
+  <ng-content></ng-content>
+</button>
+
+<div
+  #tooltipRef
+  (click)="close()"
+  [hidden]="!show"
+  [id]="id"
+  class="tooltip tooltip--{{config.arrowPosition}}"
+  role="tooltip"
+>
+  <div class="tooltip__arrow">
+    {{text}}
+  </div>
+</div>

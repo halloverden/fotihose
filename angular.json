@@ -190,6 +190,41 @@
           }
         }
       }
+    },
+    "fih-tooltip": {
+      "projectType": "library",
+      "root": "projects/fih-tooltip",
+      "sourceRoot": "projects/fih-tooltip/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/fih-tooltip/tsconfig.lib.json",
+            "project": "projects/fih-tooltip/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/fih-tooltip/src/test.ts",
+            "tsConfig": "projects/fih-tooltip/tsconfig.spec.json",
+            "karmaConfig": "projects/fih-tooltip/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/fih-tooltip/tsconfig.lib.json",
+              "projects/fih-tooltip/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "fotihose",
