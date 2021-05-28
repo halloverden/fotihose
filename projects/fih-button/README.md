@@ -15,7 +15,7 @@ npm i @fotihose/button -S
 Add #button to the button, so the component knows what element is the button. Woah, poetry! 
 
 ```html
-  <fih-button loadingIndicatorColor="#fff" loadingIndicatorSize="20" [processing]=true>
+  <fih-button loadingIndicatorColor="#fff" [loadingIndicatorSize]="20" [processing]=true>
     <button #button></button>
   </fih-button>
 ```
@@ -25,7 +25,7 @@ Add #button to the button, so the component knows what element is the button. Wo
 | Input                   | Type     | Default  | Description |
 |-------------------------|:--------:|:--------:|:-----------:|
 | loadingIndicatorColor   | string   | #000     | Color of the loading indicator (hex)
-| loadingIndicatorSize    | string   | 15       | Size of the loading indicator (px)
+| loadingIndicatorSize    | number   | 15       | Size of the loading indicator (px)
 | processing              | boolean  | false    | When true, it shows a loading indicator
 
 ### Outputs
@@ -39,6 +39,9 @@ No outputs
 MIT
 
 ## Change log
+
+### 1.0.1
+- Fix documentation errors
 
 ### 1.0.0
 - First release
