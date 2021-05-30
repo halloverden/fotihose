@@ -21,7 +21,8 @@ export enum FfTooltipArrowPositions {
   right = 'right',
   topLeft = 'top-left',
   top = 'top',
-  topRight = 'top-right'
+  topRight = 'top-right',
+  none = 'none'
 }
 
 @Component({
@@ -32,7 +33,7 @@ export enum FfTooltipArrowPositions {
 })
 export class FihTooltipComponent implements OnInit {
   @Input()
-  arrowPosition: 'bottom' | 'bottom-left' | 'bottom-right' | 'left' | 'right' | 'top-left' | 'top' | 'top-right';
+  arrowPosition: 'bottom' | 'bottom-left' | 'bottom-right' | 'left' | 'right' | 'top-left' | 'top' | 'top-right' | 'none';
 
   @Output()
   clicked: EventEmitter<void> = new EventEmitter<void>();
@@ -122,6 +123,10 @@ export class FihTooltipComponent implements OnInit {
    *
    */
   private _positionWithinBounds(): void {
+    if (!this.arrowPosition || this.arrowPosition === FfTooltipArrowPositions.none) {
+      return;
+    }
+
     const overflows = this._getOverflows();
 
     switch (this.arrowPosition) {
