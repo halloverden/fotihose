@@ -1,6 +1,6 @@
 {
   "name": "@fotihose/tooltip",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "A simple tooltip",
   "keywords": [
     "angular",
@@ -17,7 +17,12 @@
     "name": "Andreas Larssen",
     "email": "andreas@halloverden.no"
   },
-  "contributors": [],
+  "contributors": [
+    {
+      "name": "Christopher Condrup",
+      "email": "christopher@halloverden.no"
+    }
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/halloverden/fotihose/tree/main/projects/fih-tooltip"

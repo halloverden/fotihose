@@ -19,7 +19,7 @@ npm i @fotihose/tooltip -S
 
 | Input         | Type               | Default               | Description                                 |
 |---------------|:------------------:|:---------------------:|:-------------------------------------------:|
-| arrowPosition | string             | -                     | bottom / bottom-left / bottom-right / left / right / top-left / top / top-right
+| arrowPosition | string             | -                     | bottom / bottom-left / bottom-right / left / right / top-left / top / top-right / none
 | id            | string             | -                     | The id to use internally for the tooltip
 | show          | boolean            | false                 | Programmatically show / hide the tooltip
 | showOnHover   | boolean            | true                  | If the tooltip should show on hover
@@ -33,7 +33,6 @@ npm i @fotihose/tooltip -S
 | clicked  | EventEmitter\<void> |  Fires when the tooltip is clicked
 
 ## TODO
-- Support no arrow
 - Support style changes
 
 ## License
