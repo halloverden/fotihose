@@ -33,7 +33,7 @@ export enum FfTooltipArrowPositions {
 })
 export class FihTooltipComponent implements OnInit {
   @Input()
-  arrowPosition: 'bottom' | 'bottom-left' | 'bottom-right' | 'left' | 'right' | 'top-left' | 'top' | 'top-right' | 'none';
+  arrowPosition: 'bottom' | 'bottom-left' | 'bottom-right' | 'left' | 'right' | 'top-left' | 'top' | 'top-right' | 'none' | string;
 
   @Output()
   clicked: EventEmitter<void> = new EventEmitter<void>();
