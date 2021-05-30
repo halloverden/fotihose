@@ -3,6 +3,7 @@ import {NgModule} from '@angular/core';
 import {AppComponent} from './app.component';
 import {FihButtonModule} from '../../projects/fih-button/src/lib/fih-button.module';
 import {FihLoadingIndicatorModule} from 'fih-loading-indicator';
+import {FihTooltipModule} from '../../projects/fih-tooltip/src/lib/fih-tooltip.module';
 
 @NgModule({
   declarations: [
@@ -11,7 +12,8 @@ import {FihLoadingIndicatorModule} from 'fih-loading-indicator';
   imports: [
     BrowserModule,
     FihButtonModule,
-    FihLoadingIndicatorModule
+    FihLoadingIndicatorModule,
+    FihTooltipModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
