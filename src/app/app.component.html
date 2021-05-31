@@ -1,8 +1,10 @@
-<section>
+<section class="loading-indicator">
+  <h2>Loading indicator</h2>
   <fih-loading-indicator size="15"></fih-loading-indicator>
 </section>
 
-<section>
+<section class="button">
+  <h2>Button</h2>
   <fih-button [processing]="test2">
     <button #button (click)="test = !test">Button 1</button>
   </fih-button>
@@ -12,7 +14,8 @@
   </fih-button>
 </section>
 
-<section>
+<section class="tooltip">
+  <h2>Tooltip</h2>
   <fih-tooltip id="tooltip-demo" arrowPosition="left" text="Hello, I'm tooltip">
     <span style="cursor: pointer">Hover me for tooltip!</span>
   </fih-tooltip>
