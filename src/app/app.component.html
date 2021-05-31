@@ -1,19 +1,19 @@
-<div>
+<section>
   <fih-loading-indicator size="15"></fih-loading-indicator>
-</div>
+</section>
 
-<div>
+<section>
   <fih-button [processing]="test2">
     <button #button (click)="test = !test">Button 1</button>
   </fih-button>
 
   <fih-button [processing]="test" [loadingIndicatorColor]="">
-    <a href="#" #button (click)="test2 = !test2">Button 2</a>
+    <button #button (click)="test2 = !test2">Button 2</button>
   </fih-button>
-</div>
+</section>
 
-<div>
-  <fih-tooltip id="tooltip-demo" arrowPosition="top-left" text="Hello, I'm tooltip">
-    <span style="cursor: pointer">Test</span>
+<section>
+  <fih-tooltip id="tooltip-demo" arrowPosition="left" text="Hello, I'm tooltip">
+    <span style="cursor: pointer">Hover me for tooltip!</span>
   </fih-tooltip>
-</div>
+</section>
