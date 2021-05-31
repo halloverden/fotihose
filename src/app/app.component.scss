@@ -3,14 +3,14 @@
     margin: 10px 0;
     padding: 20px;
 
-    &.loading-indicator {
-      //
-    }
-
     &.button {
       fih-button:nth-child(2) {
         margin: 0 10px;
       }
+    }
+
+    &.loading-indicator {
+      //
     }
 
     &.tooltip {

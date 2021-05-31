@@ -1,8 +1,3 @@
-<section class="loading-indicator">
-  <h2>Loading indicator</h2>
-  <fih-loading-indicator size="15"></fih-loading-indicator>
-</section>
-
 <section class="button">
   <h2>Button</h2>
   <fih-button [processing]="test2">
@@ -12,6 +7,11 @@
   <fih-button [processing]="test" [loadingIndicatorColor]="">
     <button #button (click)="test2 = !test2">Button 2</button>
   </fih-button>
+</section>
+
+<section class="loading-indicator">
+  <h2>Loading indicator</h2>
+  <fih-loading-indicator size="15"></fih-loading-indicator>
 </section>
 
 <section class="tooltip">
