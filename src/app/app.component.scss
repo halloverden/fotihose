@@ -4,7 +4,7 @@
     padding: 20px;
 
     &.button {
-      fih-button:nth-child(2) {
+      fih-button:nth-child(odd) {
         margin: 0 10px;
       }
     }
