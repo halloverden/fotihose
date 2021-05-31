@@ -1,12 +1,11 @@
 import {
   AfterViewInit,
-  ChangeDetectionStrategy, ChangeDetectorRef,
+  ChangeDetectionStrategy,
+  ChangeDetectorRef,
   Component,
   ElementRef,
-  EventEmitter,
   Input,
   OnInit,
-  Output,
   ViewChild
 } from '@angular/core';
 
@@ -35,9 +34,6 @@ export enum FfTooltipArrowPositions {
 export class FihTooltipComponent implements OnInit, AfterViewInit {
   @Input()
   arrowPosition: 'bottom' | 'bottom-left' | 'bottom-right' | 'left' | 'right' | 'top-left' | 'top' | 'top-right' | 'none' | string;
-
-  @Output()
-  clicked: EventEmitter<void> = new EventEmitter<void>();
 
   @Input()
   id: string;
@@ -87,7 +83,6 @@ export class FihTooltipComponent implements OnInit, AfterViewInit {
    */
   click(): void {
     this.open();
-    this.clicked.emit();
   }
 
   /**

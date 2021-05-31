@@ -28,9 +28,7 @@ npm i @fotihose/tooltip -S
 
 ### Outputs
 
-| Output   | Type                |  Description                                 |
-|----------|:-------------------:|:--------------------------------------------:|
-| clicked  | EventEmitter\<void> |  Fires when the tooltip is clicked
+No outputs
 
 ## TODO
 - Support style changes
