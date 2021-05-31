@@ -1,5 +1,6 @@
 import {
-  ChangeDetectionStrategy,
+  AfterViewInit,
+  ChangeDetectionStrategy, ChangeDetectorRef,
   Component,
   ElementRef,
   EventEmitter,
@@ -31,7 +32,7 @@ export enum FfTooltipArrowPositions {
   styleUrls: ['fih-tooltip.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class FihTooltipComponent implements OnInit {
+export class FihTooltipComponent implements OnInit, AfterViewInit {
   @Input()
   arrowPosition: 'bottom' | 'bottom-left' | 'bottom-right' | 'left' | 'right' | 'top-left' | 'top' | 'top-right' | 'none' | string;
 
@@ -61,8 +62,17 @@ export class FihTooltipComponent implements OnInit {
   /**
    *
    */
-  constructor() {
+  constructor(private _cdr: ChangeDetectorRef) {
     this._window = getWindow();
+  }
+
+  /**
+   *
+   */
+  ngAfterViewInit() {
+    if (this.showOnLoad) {
+      this.open();
+    }
   }
 
   /**
@@ -70,11 +80,6 @@ export class FihTooltipComponent implements OnInit {
    */
   ngOnInit(): void {
     this._validateConfig();
-
-    // TODO: Move to after view init
-    if (this.showOnLoad) {
-      this.open();
-    }
   }
 
   /**
@@ -90,6 +95,7 @@ export class FihTooltipComponent implements OnInit {
    */
   close(): void {
     this.show = false;
+    this._cdr.detectChanges();
   }
 
   /**
@@ -116,6 +122,7 @@ export class FihTooltipComponent implements OnInit {
   open(): void {
     this._positionWithinBounds();
     this.show = true;
+    this._cdr.detectChanges();
   }
 
   /**
