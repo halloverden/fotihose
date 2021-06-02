@@ -25,7 +25,6 @@ npm i @fotihose/tooltip -S
 | recalculateArrow | boolean            | false                 | If tooltip is "out of bounds", it tries to recalculate where to put the arrow
 | show             | boolean            | false                 | Programmatically show / hide the tooltip
 | showOnHover      | boolean            | true                  | If the tooltip should show on hover
-| showOnLoad       | boolean            | false                 | If the tooltip should show on load
 | text             | string             | -                     | The tooltip text content
 | width            | number             | -                     | The width of the tooltip
 

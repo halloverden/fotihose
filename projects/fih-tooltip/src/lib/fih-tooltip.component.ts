@@ -51,9 +51,6 @@ export class FihTooltipComponent implements OnInit, AfterViewInit {
   showOnHover = true;
 
   @Input()
-  showOnLoad = false;
-
-  @Input()
   text: string;
 
   @ViewChild('tooltip', {static: true})
@@ -85,7 +82,7 @@ export class FihTooltipComponent implements OnInit, AfterViewInit {
 
     this._renderer.setStyle(this.tooltipArrow.nativeElement, 'min-width', this.minWidth + 'px');
 
-    if (this.showOnLoad) {
+    if (this.show) {
       this.open();
     }
   }
