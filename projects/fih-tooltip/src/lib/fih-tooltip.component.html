@@ -1,0 +1,26 @@
+<span
+  (click)="click()"
+  (focusin)="open()"
+  (focusout)="close()"
+  (keyup.escape)="close()"
+  (mouseenter)="mouseEnter()"
+  (mouseleave)="mouseLeave()"
+  [attr.aria-describedby]="id"
+  [attr.aria-expanded]="show"
+  aria-label="Tooltip"
+  class="trigger"
+  role="button">
+  <ng-content></ng-content>
+</span>
+
+<div
+  #tooltip
+  (click)="close()"
+  [hidden]="!show"
+  [id]="id"
+  class="tooltip tooltip--{{arrowPosition}}"
+  role="tooltip">
+  <div class="tooltip__arrow" #tooltipArrow>
+    {{text}}
+  </div>
+</div>

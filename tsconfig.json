@@ -30,6 +30,12 @@
       ],
       "fih-button/*": [
         "dist/fih-button/*"
+      ],
+      "fih-tooltip": [
+        "dist/fih-tooltip"
+      ],
+      "fih-tooltip/*": [
+        "dist/fih-tooltip/*"
       ]
     }
   },

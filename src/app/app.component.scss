@@ -1,0 +1,19 @@
+:host {
+  section {
+    padding: 10px;
+
+    &.button {
+      fih-button:nth-child(odd) {
+        margin: 0 10px;
+      }
+    }
+
+    &.loading-indicator {
+      //
+    }
+
+    &.tooltip {
+      //
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "extends": "../../tslint.json",
+  "rules": {
+    "directive-selector": [
+      true,
+      "attribute",
+      "fih",
+      "camelCase"
+    ],
+    "variable-name": [
+      true,
+      "allow-leading-underscore"
+    ],
+    "component-selector": [
+      true,
+      "element",
+      "fih",
+      "kebab-case"
+    ]
+  }
+}
