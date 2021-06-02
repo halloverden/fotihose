@@ -21,10 +21,12 @@ npm i @fotihose/tooltip -S
 |---------------|:------------------:|:---------------------:|:-------------------------------------------:|
 | arrowPosition | string             | -                     | bottom / bottom-left / bottom-right / left / right / top-left / top / top-right / none
 | id            | string             | -                     | The id to use internally for the tooltip
+| minWidth      | number             | 200                   | The max width of the tooltip
 | show          | boolean            | false                 | Programmatically show / hide the tooltip
 | showOnHover   | boolean            | true                  | If the tooltip should show on hover
 | showOnLoad    | boolean            | false                 | If the tooltip should show on load
 | text          | string             | -                     | The tooltip text content
+| width         | number             | -                     | The width of the tooltip
 
 ### Outputs
 

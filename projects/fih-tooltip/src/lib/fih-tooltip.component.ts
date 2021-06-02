@@ -5,7 +5,7 @@ import {
   Component,
   ElementRef,
   Input,
-  OnInit,
+  OnInit, Renderer2,
   ViewChild
 } from '@angular/core';
 
@@ -39,6 +39,9 @@ export class FihTooltipComponent implements OnInit, AfterViewInit {
   id: string;
 
   @Input()
+  minWidth = 200;
+
+  @Input()
   show = false;
 
   @Input()
@@ -50,15 +53,22 @@ export class FihTooltipComponent implements OnInit, AfterViewInit {
   @Input()
   text: string;
 
-  @ViewChild('tooltipRef', {static: true})
-  tooltipRef: ElementRef;
+  @ViewChild('tooltip', {static: true})
+  tooltip: ElementRef;
+
+  @ViewChild('tooltipArrow', {static: true})
+  tooltipArrow: ElementRef;
+
+  @Input()
+  width: number = null;
 
   private readonly _window: Window;
 
   /**
    *
    */
-  constructor(private _cdr: ChangeDetectorRef) {
+  constructor(private _cdr: ChangeDetectorRef,
+              private _renderer: Renderer2) {
     this._window = getWindow();
   }
 
@@ -66,6 +76,13 @@ export class FihTooltipComponent implements OnInit, AfterViewInit {
    *
    */
   ngAfterViewInit() {
+    if (this.width) {
+      console.log('HEY!', this.width);
+      this._renderer.setStyle(this.tooltipArrow.nativeElement, 'width', this.width + 'px');
+    }
+
+    this._renderer.setStyle(this.tooltipArrow.nativeElement, 'min-width', this.minWidth + 'px');
+
     if (this.showOnLoad) {
       this.open();
     }
@@ -202,7 +219,7 @@ export class FihTooltipComponent implements OnInit, AfterViewInit {
    *
    */
   private _getOverflows(): {top: boolean, right: boolean, bottom: boolean, left: boolean} {
-    const tipSize: DOMRect = this.tooltipRef.nativeElement.getBoundingClientRect();
+    const tipSize: DOMRect = this.tooltip.nativeElement.getBoundingClientRect();
     const vh = this._window.innerHeight || 0;
     const vw = this._window.innerWidth || 0;
 
