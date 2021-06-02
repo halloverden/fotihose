@@ -36,6 +36,9 @@ export class FihTooltipComponent implements OnInit, AfterViewInit {
   arrowPosition: 'bottom' | 'bottom-left' | 'bottom-right' | 'left' | 'right' | 'top-left' | 'top' | 'top-right' | 'none' | string;
 
   @Input()
+  recalculateArrow = false;
+
+  @Input()
   id: string;
 
   @Input()
@@ -60,7 +63,7 @@ export class FihTooltipComponent implements OnInit, AfterViewInit {
   tooltipArrow: ElementRef;
 
   @Input()
-  width: number = null;
+  width: number = undefined;
 
   private readonly _window: Window;
 
@@ -77,7 +80,6 @@ export class FihTooltipComponent implements OnInit, AfterViewInit {
    */
   ngAfterViewInit() {
     if (this.width) {
-      console.log('HEY!', this.width);
       this._renderer.setStyle(this.tooltipArrow.nativeElement, 'width', this.width + 'px');
     }
 
@@ -132,7 +134,10 @@ export class FihTooltipComponent implements OnInit, AfterViewInit {
    *
    */
   open(): void {
-    this._positionWithinBounds();
+    if (this.arrowPosition && this.arrowPosition !== FfTooltipArrowPositions.none && this.recalculateArrow) {
+      this._positionWithinBounds();
+    }
+
     this.show = true;
     this._cdr.detectChanges();
   }
@@ -142,10 +147,6 @@ export class FihTooltipComponent implements OnInit, AfterViewInit {
    *
    */
   private _positionWithinBounds(): void {
-    if (!this.arrowPosition || this.arrowPosition === FfTooltipArrowPositions.none) {
-      return;
-    }
-
     const overflows = this._getOverflows();
 
     switch (this.arrowPosition) {
