@@ -27,10 +27,13 @@ $across-plus-offset: calc(100% + #{$arrow-size} + #{$tooltip-offset});
       background-color: $clr-tooltip-bg;
       border-radius: 6px;
       color: #fff;
-      font-size: .8em;
       padding: .75em .9em;
-      position: relative;
       text-align: center;
+      white-space: nowrap;
+
+      &.defined-width {
+        white-space: normal;
+      }
 
       &:before,
       &:after {

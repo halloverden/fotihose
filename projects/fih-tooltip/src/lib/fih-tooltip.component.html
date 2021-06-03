@@ -1,4 +1,4 @@
-<span
+<div
   (click)="click()"
   (focusin)="open()"
   (focusout)="close()"
@@ -11,7 +11,7 @@
   class="trigger"
   role="button">
   <ng-content></ng-content>
-</span>
+</div>
 
 <div
   #tooltip
@@ -20,7 +20,10 @@
   [id]="id"
   class="tooltip tooltip--{{arrowPosition}}"
   role="tooltip">
-  <div class="tooltip__arrow" #tooltipArrow>
+  <div
+    [class.defined-width]="!!width"
+    class="tooltip__arrow"
+    #tooltipArrow>
     {{text}}
   </div>
 </div>
