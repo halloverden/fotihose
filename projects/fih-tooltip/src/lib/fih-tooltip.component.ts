@@ -45,9 +45,6 @@ export class FihTooltipComponent implements OnInit, AfterViewInit {
   show = false;
 
   @Input()
-  showOnHover = true;
-
-  @Input()
   text: string;
 
   @ViewChild('tooltip', {static: true})
@@ -112,18 +109,14 @@ export class FihTooltipComponent implements OnInit, AfterViewInit {
    *
    */
   mouseEnter(): void {
-    if (this.showOnHover) {
-      this.open();
-    }
+    this.open();
   }
 
   /**
    *
    */
   mouseLeave(): void {
-    if (this.showOnHover) {
-      this.close();
-    }
+    this.close();
   }
 
   /**

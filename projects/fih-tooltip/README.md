@@ -23,7 +23,6 @@ npm i @fotihose/tooltip -S
 | id               | string             | -                     | The id to use internally for the tooltip
 | minWidth         | number             | -                     | The max width of the tooltip
 | show             | boolean            | false                 | Programmatically show / hide the tooltip
-| showOnHover      | boolean            | true                  | If the tooltip should show on hover
 | text             | string             | -                     | The tooltip text content
 | width            | number             | -                     | The width of the tooltip
 
