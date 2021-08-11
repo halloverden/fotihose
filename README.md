@@ -14,3 +14,9 @@ The general idea behind Fotihose is to create a network of standalone Angular co
   - Again, with a mix of sane defaults and configurable styles and functionality.
 - All components have to:
   - Use ChangeDetectionStrategy.OnPush.
+  
+## TODO
+- Define supported Angular versions range in each project
+- Automate tasks:
+  - Run `npm i` in all project sub folders.
+  - Prep and release project.
