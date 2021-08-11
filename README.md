@@ -24,6 +24,7 @@ It should not be opinionated when it comes to design, in fact, it shouldn't incl
 
 ### All packages have to
 - Reside in the @fotihose namespace.
+- Follow SemVer.
 - Contain a readme that follows the same form and function as rest of the components.
 
 ### Misc
@@ -37,3 +38,5 @@ It should not be opinionated when it comes to design, in fact, it shouldn't incl
 - Automate tasks:
   - Run `npm i` in all project sub folders.
   - Prep and release project.
+- Write tests for all projects.
+- Provide images for all projects, showing how the library works.
