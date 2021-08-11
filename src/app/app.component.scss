@@ -15,5 +15,13 @@
     &.tooltip {
       //
     }
+
+    &.icon-input {
+      fih-icon-input {
+        input {
+          height: 25px;
+        }
+      }
+    }
   }
 }

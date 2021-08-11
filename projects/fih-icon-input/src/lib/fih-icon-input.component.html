@@ -1,0 +1,20 @@
+<ng-content select="input" class="input"></ng-content>
+
+<img
+  *ngIf="!processing"
+  (click)="clickAction()"
+  (keydown.enter)="clickAction()"
+  [src]="iconPath"
+  [class]="'icon ' + iconPosition + ' ' + iconClassList"
+  [class.clickable]="clicked.observers.length && !disabled"
+  [class.disabled]="disabled"
+  alt="Icon"
+  role="button"
+/>
+
+<fih-loading-indicator
+  *ngIf="processing"
+  class="icon"
+  color="#979797"
+  [size]="20"
+></fih-loading-indicator>

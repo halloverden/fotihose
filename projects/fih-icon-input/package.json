@@ -1,0 +1,37 @@
+{
+  "name": "@fotihose/icon-input",
+  "version": "1.0.0-rc.1",
+  "description": "A simple component for adding an icon to an input element",
+  "keywords": [
+    "angular",
+    "fotihose",
+    "icon input",
+    "ngx"
+  ],
+  "homepage": "https://github.com/halloverden/fotihose/tree/main/projects/fih-icon-input#readme",
+  "bugs": {
+    "url": "https://github.com/halloverden/fotihose/issues"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Andreas Larssen",
+    "email": "andreas@halloverden.no"
+  },
+  "contributors": [
+    {
+      "name": "Christopher Condrup",
+      "email": "christopher@halloverden.no"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/halloverden/fotihose/tree/main/projects/fih-icon-input"
+  },
+  "dependencies": {
+    "@fotihose/loading-indicator": "^1.0.0"
+  },
+  "peerDependencies": {
+    "@angular/common": "^8.2.0",
+    "@angular/core": "^8.2.0"
+  }
+}

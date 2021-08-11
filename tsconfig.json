@@ -36,6 +36,12 @@
       ],
       "fih-tooltip/*": [
         "dist/fih-tooltip/*"
+      ],
+      "fih-icon-input": [
+        "dist/fih-icon-input"
+      ],
+      "fih-icon-input/*": [
+        "dist/fih-icon-input/*"
       ]
     }
   },

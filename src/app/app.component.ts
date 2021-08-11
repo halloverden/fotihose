@@ -6,6 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['app.component.scss']
 })
 export class AppComponent {
-  test = false;
-  test2 = false;
+  buttonProcessing = false;
+  button2Processing = false;
+
+  /**
+   *
+   */
+  alert(message: string): void {
+    window.alert(message);
+  }
 }
