@@ -17,18 +17,20 @@ It should not be opinionated when it comes to design, in fact, it shouldn't incl
   - Again, with a mix of sane defaults and configurable styles and functionality.
 
 ## Contribution checklist
-### All components have to
+### All components have to:
 - Be prefixed with "fih-"
 - Use ChangeDetectionStrategy.OnPush.
 - Handle OnChanges for all inputs.
 
-### All packages have to
+### All packages have to:
 - Reside in the @fotihose namespace.
-- Follow SemVer.
+- Follow SemVer:
+  - Breaking changes is a major version! 
 - Contain a readme that follows the same form and function as rest of the components.
 
 ### Misc
-- Update app.component.html with an example showing your component in use. Follow the existing conventions.  
+- Update app.component.html with an example showing your component in use. Follow the existing conventions.
+- Start with basic functionality, then expand. It's better to have a functional library that does something basic than to work on something fancy for ages.
 
 ### Coding conventions
 - Use trailing underscore for private methods and attributes.
