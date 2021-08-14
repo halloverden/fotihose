@@ -1,4 +1,17 @@
-import {ChangeDetectionStrategy, Component, EventEmitter, HostBinding, Input, OnInit, Output} from '@angular/core';
+import {
+  AfterViewInit,
+  ChangeDetectionStrategy,
+  Component,
+  ElementRef,
+  EventEmitter,
+  HostBinding,
+  Input,
+  OnChanges,
+  Output,
+  Renderer2,
+  SimpleChanges,
+  ViewChild
+} from '@angular/core';
 
 /**
  * @example <fih-icon-input></fih-loading-indicator>
@@ -9,7 +22,7 @@ import {ChangeDetectionStrategy, Component, EventEmitter, HostBinding, Input, On
   styleUrls: ['./fih-icon-input.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class FihIconInputComponent implements OnInit {
+export class FihIconInputComponent implements AfterViewInit, OnChanges {
   @Output()
   clicked?: EventEmitter<any> = new EventEmitter<any>();
 
@@ -25,6 +38,9 @@ export class FihIconInputComponent implements OnInit {
   @Input()
   iconPosition?: 'left' | 'right' = 'right';
 
+  @Input()
+  iconSize = 15;
+
   @HostBinding('class.processing')
   @Input()
   processing = false;
@@ -39,6 +55,14 @@ export class FihIconInputComponent implements OnInit {
     return (!this.iconPosition || this.iconPosition === 'right');
   }
 
+  @ViewChild('icon', {static: false})
+  icon: ElementRef<SVGImageElement>;
+
+  /**
+   *
+   */
+  constructor(private _renderer: Renderer2) {}
+
   /**
    *
    */
@@ -51,7 +75,25 @@ export class FihIconInputComponent implements OnInit {
   /**
    *
    */
-  ngOnInit(): void {
-    console.log(this.iconPath);
+  ngAfterViewInit(): void {
+    this._setSize();
+  }
+
+  /**
+   *
+   */
+  ngOnChanges(changes: SimpleChanges) {
+    // Size
+    if (changes.iconSize && !changes.iconSize.isFirstChange()) {
+      this._setSize();
+    }
+  }
+
+  /**
+   *
+   */
+  private _setSize(): void {
+    this._renderer.setStyle(this.icon.nativeElement, 'height', this.iconSize + 'px');
+    this._renderer.setStyle(this.icon.nativeElement, 'width', this.iconSize + 'px');
   }
 }

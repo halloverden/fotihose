@@ -29,6 +29,7 @@ npm i @fotihose/icon-input -S
 | iconClassList | string  | -       | List of classes to add to the icon img element. Separate with space
 | iconPath      | string  | -       | The path for the icon to display
 | iconPosition  | string  | right   | right / left
+| iconSize      | number  | 15      | Size of the icon (px)
 | processing    | boolean | false   | If the input is "processing". Will disable input and click event
 
 ### Outputs
