@@ -20,7 +20,7 @@
     :host input,
     ::content input,
     ::ng-deep input {
-      padding-left: 50px !important;
+      padding-left: 50px !important; // TODO: Set in relation to icon size
     }
   }
 
@@ -32,7 +32,7 @@
     :host input,
     ::content input,
     ::ng-deep input {
-      padding-right: 50px !important;
+      padding-right: 50px !important; // TODO: Set in relation to icon size
     }
   }
 
