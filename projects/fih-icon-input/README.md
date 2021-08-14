@@ -17,6 +17,7 @@ npm i @fotihose/icon-input -S
                   iconPath="assets/images/my.svg"
                   iconPosition="right"
                   [processing]="false">
+        <input />
   </fih-icon-input>
 ```
 
