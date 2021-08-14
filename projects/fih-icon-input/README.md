@@ -12,7 +12,12 @@ npm i @fotihose/icon-input -S
 
 ## Usage
 ```html
-  <fih-icon-input></fih-icon-input>
+  <fih-icon-input [disabled]="false" 
+                  iconClassList="my-class your-class"
+                  iconPath="assets/images/my.svg"
+                  iconPosition="right"
+                  [processing]="false">
+</fih-icon-input>
 ```
 
 ### Inputs
