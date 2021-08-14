@@ -3,6 +3,12 @@
 The general idea behind Fotihose is to create a network of standalone Angular components that lets you install that one component instead of a whole library.
 It should not be opinionated when it comes to design, in fact, it shouldn't include design at all if not absolutely necessary. 
 
+## Components
+- [Button](projects/fih-button)
+- [Icon Input](projects/fih-icon-input)
+- [Loading Indicator](projects/fih-loading-indicator)
+- [Tooltip](projects/fih-tooltip)
+
 ## Dogma
 - Do not encapsulate native HTML elements.
 - No design!
@@ -33,7 +39,8 @@ It should not be opinionated when it comes to design, in fact, it shouldn't incl
 - Start with basic functionality, then expand. It's better to have a functional library that does something basic than to work on something fancy for ages.
 
 ### Coding conventions
-- Use trailing underscore for private methods and attributes.
+- Use leading underscore for private methods and attributes.
+- Use trailing $ for observables.
   
 ## TODO
 - Define supported Angular versions range in each project.
