@@ -9,6 +9,13 @@
   </fih-button>
 </section>
 
+<section class="icon-input">
+  <h2>Icon input</h2>
+  <fih-icon-input iconPath="/assets/svgs/spyglass.svg" (clicked)="alert('Clicked the icon input!')">
+    <input />
+  </fih-icon-input>
+</section>
+
 <section class="loading-indicator">
   <h2>Loading indicator</h2>
   <fih-loading-indicator size="15"></fih-loading-indicator>
@@ -19,11 +26,4 @@
   <fih-tooltip id="tooltip-demo" arrowPosition="top" text="Hello, I'm tooltip">
     <span style="cursor: pointer">Hover me for tooltip!</span>
   </fih-tooltip>
-</section>
-
-<section class="icon-input">
-  <h2>Icon input</h2>
-  <fih-icon-input iconPath="/assets/svgs/spyglass.svg" (clicked)="alert('Clicked the icon input!')">
-    <input />
-  </fih-icon-input>
 </section>
