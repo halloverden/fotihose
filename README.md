@@ -26,7 +26,7 @@ It should not be opinionated when it comes to design, in fact, it shouldn't incl
 ### All components have to:
 - Be prefixed with "fih-"
 - Use ChangeDetectionStrategy.OnPush.
-- Handle OnChanges for all inputs.
+- Handle OnChanges for all inputs where needed.
 
 ### All packages have to:
 - Reside in the @fotihose namespace.
