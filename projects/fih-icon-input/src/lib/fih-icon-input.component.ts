@@ -30,9 +30,6 @@ export class FihIconInputComponent implements AfterViewInit, OnChanges {
   disabled = false;
 
   @Input()
-  iconClassList = '';
-
-  @Input()
   iconPath = 'assets/images/svg/spyglass.svg';
 
   @Input()

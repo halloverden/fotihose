@@ -5,7 +5,7 @@
   (click)="clickAction()"
   (keydown.enter)="clickAction()"
   [src]="iconPath"
-  [class]="'icon ' + iconPosition + ' ' + iconClassList"
+  [class]="'icon ' + iconPosition"
   [class.clickable]="clicked.observers.length && !disabled"
   [class.disabled]="disabled"
   alt="Icon"

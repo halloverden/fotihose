@@ -12,8 +12,7 @@ npm i @fotihose/icon-input -S
 
 ## Usage
 ```html
-  <fih-icon-input [disabled]="false" 
-                  iconClassList="my-class your-class"
+  <fih-icon-input [disabled]="false"
                   iconPath="assets/images/my.svg"
                   iconPosition="right"
                   [iconSize]="20"
@@ -27,7 +26,6 @@ npm i @fotihose/icon-input -S
 | Input         | Type    | Default | Description |
 |---------------|:-------:|:-------:|:-----------:|
 | disabled      | boolean | false   | If the input is disabled or not
-| iconClassList | string  | -       | List of classes to add to the icon img element. Separate with space
 | iconPath      | string  | -       | The path for the icon to display
 | iconPosition  | string  | right   | right / left
 | iconSize      | number  | 15      | Size of the icon (px)
