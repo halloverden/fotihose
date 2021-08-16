@@ -37,8 +37,6 @@ npm i @fotihose/icon-input -S
 |---------------|:-------:|:-----------:|
 | clicked       | boolean | Event when the icon is clicked
 
-## TODO
-
 ## License
 MIT
 
