@@ -16,23 +16,11 @@
     > .icon {
       left: 14px;
     }
-
-    :host input,
-    ::content input,
-    ::ng-deep input {
-      padding-left: 50px !important; // TODO: Set in relation to icon size
-    }
   }
 
   &.right {
     > .icon {
       right: 14px;
-    }
-
-    :host input,
-    ::content input,
-    ::ng-deep input {
-      padding-right: 50px !important; // TODO: Set in relation to icon size
     }
   }
 
