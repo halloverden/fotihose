@@ -14,7 +14,7 @@ import {
 } from '@angular/core';
 
 /**
- * @example <fih-icon-input><input /></fih-loading-indicator>
+ * @example <fih-icon-input><input /></fih-icon-input>
  */
 @Component({
   selector: 'fih-icon-input',
