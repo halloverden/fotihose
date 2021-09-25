@@ -14,7 +14,7 @@ import {
 } from '@angular/core';
 
 /**
- * @example <fih-icon-input><input /></fih-loading-indicator>
+ * @example <fih-icon-input><input /></fih-icon-input>
  */
 @Component({
   selector: 'fih-icon-input',
@@ -30,7 +30,7 @@ export class FihIconInputComponent implements AfterViewInit, OnChanges {
   disabled = false;
 
   @Input()
-  iconPath = 'assets/images/svg/spyglass.svg';
+  iconPath;
 
   @Input()
   iconPosition?: 'left' | 'right' = 'right';
