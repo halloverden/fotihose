@@ -8,8 +8,8 @@ import {CommonModule} from '@angular/common';
     FihIconInputComponent
   ],
   imports: [
-    FihLoadingIndicatorModule,
-    CommonModule
+    CommonModule,
+    FihLoadingIndicatorModule
   ],
   exports: [
     FihIconInputComponent
