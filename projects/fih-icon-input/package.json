@@ -1,6 +1,6 @@
 {
   "name": "@fotihose/icon-input",
-  "version": "1.0.3-rc.1",
+  "version": "1.0.0",
   "description": "A simple component for adding an icon to an input element",
   "keywords": [
     "angular",
@@ -31,7 +31,7 @@
     "@fotihose/loading-indicator": "^1.0.0"
   },
   "peerDependencies": {
-    "@angular/common": "^8.2.0 - ^12",
-    "@angular/core": "^8.2.0 - ^12"
+    "@angular/common": "8.2.0 - 12",
+    "@angular/core": "8.2.0 - 12"
   }
 }

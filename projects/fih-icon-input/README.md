@@ -42,5 +42,8 @@ MIT
 
 ## Change log
 
+### 1.0.1
+- Fixing bad build
+
 ### 1.0.0
 - First release
