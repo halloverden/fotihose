@@ -1,6 +1,6 @@
 {
   "name": "@fotihose/icon-input",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple component for adding an icon to an input element",
   "keywords": [
     "angular",
