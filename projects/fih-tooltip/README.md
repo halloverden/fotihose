@@ -38,5 +38,8 @@ MIT
 
 ## Change log
 
+### 1.0.1
+- Support Angular 8-12
+
 ### 1.0.0
 - First release

@@ -1,6 +1,6 @@
 {
   "name": "@fotihose/loading-indicator",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A simple loading indicator",
   "keywords": [
     "angular",
@@ -23,7 +23,7 @@
     "url": "https://github.com/halloverden/fotihose/tree/main/projects/fih-loading-indicator"
   },
   "peerDependencies": {
-    "@angular/common": "^8.2.0",
-    "@angular/core": "^8.2.0"
+    "@angular/common": "8.2.0 - 12",
+    "@angular/core": "8.2.0 - 12"
   }
 }
