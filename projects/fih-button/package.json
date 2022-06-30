@@ -24,7 +24,7 @@
     "url": "https://github.com/halloverden/fotihose/tree/main/projects/fih-button"
   },
   "dependencies": {
-    "@fotihose/loading-indicator": "^1.0.0"
+    "@fotihose/loading-indicator": "^1.1.0"
   },
   "peerDependencies": {
     "@angular/common": "8.2.0 - 14",
