@@ -2,6 +2,7 @@
   "name": "@fotihose/loading-indicator",
   "version": "1.0.3",
   "description": "A simple loading indicator",
+  "private": false,
   "keywords": [
     "angular",
     "fotihose",
