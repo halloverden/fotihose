@@ -31,17 +31,3 @@ No outputs
 
 ## License
 MIT
-
-## Change log
-
-### 1.0.3
-- Support Angular 8-12
-
-### 1.0.2
-- Bugfix: Handle changes in input
-
-### 1.0.1
-- Docs: Small changes
-
-### 1.0.0
-- First release
