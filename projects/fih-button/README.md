@@ -37,11 +37,3 @@ No outputs
 
 ## License
 MIT
-
-## Change log
-
-### 1.0.1
-- Fix documentation errors
-
-### 1.0.0
-- First release

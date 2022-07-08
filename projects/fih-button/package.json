@@ -1,7 +1,8 @@
 {
   "name": "@fotihose/button",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "A simple button",
+  "private": false,
   "keywords": [
     "angular",
     "button",
@@ -17,16 +18,21 @@
     "name": "Andreas Larssen",
     "email": "andreas@halloverden.no"
   },
-  "contributors": [],
+  "contributors": [
+    {
+      "name": "Erich Json Fosse",
+      "email": "erich@halloverden.no"
+    }
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/halloverden/fotihose/tree/main/projects/fih-button"
   },
   "dependencies": {
-    "@fotihose/loading-indicator": "^1.0.0"
+    "@fotihose/loading-indicator": "^1.1.0"
   },
   "peerDependencies": {
-    "@angular/common": "8.2.0 - 12",
-    "@angular/core": "8.2.0 - 12"
+    "@angular/common": "8.2.0 - 14",
+    "@angular/core": "8.2.0 - 14"
   }
 }
