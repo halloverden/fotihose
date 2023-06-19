@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.2.0
+- Support Angular 15
+
 ## 1.1.0
 - Support Angular 8.2.0 - 14
 - Set "private": false in package.json
