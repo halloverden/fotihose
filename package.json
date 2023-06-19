@@ -3,8 +3,12 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --host 0.0.0.0",
     "build": "ng build",
+    "build-button": "ng build fih-button",
+    "build-icon-input": "ng build fih-icon-input",
+    "build-loading-indicator": "ng build fih-loading-indicator",
+    "build-tooltip": "ng build fih-tooltip",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"

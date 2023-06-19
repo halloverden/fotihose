@@ -31,7 +31,7 @@
     "@fotihose/loading-indicator": "^1.0.0"
   },
   "peerDependencies": {
-    "@angular/common": "8.2.0 - 12",
-    "@angular/core": "8.2.0 - 12"
+    "@angular/common": "8.2.0 - 15",
+    "@angular/core": "8.2.0 - 15"
   }
 }
